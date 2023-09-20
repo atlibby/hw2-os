@@ -1,10 +1,6 @@
 #include <stdio.h>
+#include <stdlib.h>
 #include "pqueue.atlibby.akirscht.h"
-
-int main() {
-    printf("Hello, World!\n");
-    return 0;
-}
 
 int enqueue(PQueueNode **pqueue, int priority, void *data){
     // ** Pointer to a pointer -> So we can change the value of the pointer
@@ -36,6 +32,9 @@ int enqueue(PQueueNode **pqueue, int priority, void *data){
 
     return 0;
 }
+
+// Remove the front of the list and return the data from that list node (not the list node itself). If the pqueue
+//is empty, then return NULL. Free the queue node itself in your function (but not the data!)
 
 void *dequeue(PQueueNode **pqueue){
 

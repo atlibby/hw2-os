@@ -1,4 +1,4 @@
-# Install script for directory: /Users/andrewlibby/CLionProjects/untitled7
+# Install script for directory: /Users/andrewlibby/CLionProjects/hw2-os/untitled7
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -45,5 +45,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/Users/andrewlibby/CLionProjects/untitled7/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/Users/andrewlibby/CLionProjects/hw2-os/untitled7/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")
