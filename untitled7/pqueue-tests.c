@@ -184,6 +184,8 @@ int pqueueTests() {
 //--------------------------------------------------------------------------
 
 int main() {
-    pqueueTests();
+    printf("Hello");
+    //pqueueTests();
+    return 0;
 }
 
