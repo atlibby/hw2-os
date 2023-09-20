@@ -37,7 +37,14 @@ int enqueue(PQueueNode **pqueue, int priority, void *data){
 //is empty, then return NULL. Free the queue node itself in your function (but not the data!)
 
 void *dequeue(PQueueNode **pqueue){
-
+    if (*pqueue == NULL) {
+        return NULL;
+    }
+    PQueueNode *front = *pqueue;
+    void *data = front->data;
+    *pqueue = front->next;
+    free(front);
+    return data;
 }
 
 void *peek(PQueueNode *pqueue){
