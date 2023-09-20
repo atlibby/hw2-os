@@ -14,7 +14,7 @@ int enqueue(PQueueNode **pqueue, int priority, void *data){
     PQueueNode* front;
 
     //Creates pointer to a PQueueNode
-    PQueueNode *newNode = /*(PQueueNode*)*/malloc(sizeof(PQueueNode));
+    PQueueNode *newNode = (PQueueNode*)malloc(sizeof(PQueueNode));
 
     newNode->priority = priority;
     newNode->data = data;
@@ -22,6 +22,10 @@ int enqueue(PQueueNode **pqueue, int priority, void *data){
 
     if (*pqueue == NULL) {
         // If the queue is empty, set front to the new node
+        *pqueue = newNode;
+} else if (priority < (*pqueue)->priority) {
+        // If the new node has a lower priority than the front of the queue, set the new node to the front
+        newNode->next = *pqueue;
         *pqueue = newNode;
     } else {
         PQueueNode *current = *pqueue;
