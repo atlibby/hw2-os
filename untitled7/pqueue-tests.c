@@ -3,7 +3,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-#include "pqueue.jhibbele.h" // use your .h file
+#include "pqueue.atlibby.akirscht.h" // use your .h file
 
 Thing *createThing(char *name, unsigned int weight) {
     Thing *thing;
@@ -184,6 +184,8 @@ int pqueueTests() {
 //--------------------------------------------------------------------------
 
 int main() {
-    pqueueTests();
+    printf("Hello");
+    //pqueueTests();
+    return 0;
 }
 
