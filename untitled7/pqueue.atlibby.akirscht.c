@@ -66,6 +66,7 @@ void *peek(PQueueNode *pqueue){
 void printQueue(PQueueNode *pqueue, void (printFunction)(void*)){
     PQueueNode *current = pqueue;
     while (current != NULL) {
+        printf("priority = %d data = ", current->priority);
         printFunction(current->data);
         current = current->next;
     }
